@@ -2,30 +2,147 @@
 <head>
 <title>Form | Student Registration</title>
 <style>
-form{
-border:1px solid black;
-display:flex;
-flex-direction:column;
+table{
+width:100%;
 }
 </style>
 </head>
 <body>
 <h1>Student Registration</h1>
 <form>
-<label>First name<input type="text"></label>
-<label>Last name<input type="text"></label>
-<label>Email<input type="email" placeholder="example.gmail.com"></label>
-<label>DOB<input type="date"></label>
-<label>Mobile Number<input type="number"></label>
-<label>Gender<input type="radio" name="gender">Male
+<table border="1" align="center" cellpadding="5" cellspacing="0">
+
+<tr>
+ <td>First name</td>
+ <td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Last name</td>
+<td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email" placeholder="example.gmail.com"></td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>Mobile Number</td>
+<td><input type="number"></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="gender">Male
 <input type="radio" name="gender">Female
-</label>
-<label>Address<textarea ></textarea></label>
-<label>City<input type="text"> (max 30 characters)</label>
-<label>Pin<input type="number">(6 digit numbers)</label>
-<label>State<input type="text"></label>
-<label>Country<input type="text"></label>
-<label>Hobbies<input type="checkbox"></label>
+</td>
+</tr>
+
+<tr>
+<td>Address</td>
+<td><textarea ></textarea></td>
+</tr>
+
+<tr>
+<td>City</td>
+<td><input type="text"> (max 30 characters)</td>
+</tr>
+
+<tr>
+<td>Pin</td><td><input type="number">(6 digit numbers)</td>
+</tr>
+
+<tr>
+<td>State</td><td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Country</td><td><input type="text"></td>
+</tr>
+
+<tr>
+<td>Hobbies</td><td><input type="checkbox">Dancing
+<input type="checkbox">Singing
+<input type="checkbox">painting
+<input type="checkbox">other</td>
+</tr>
+
+<tr>
+    <td>Qualification:</td>
+    <td>
+        <table border="1" cellpadding="4" cellspacing="0">
+            <tr>
+                <th>SL NO</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board1"></td>
+                <td><input type="text" name="percent1"></td>
+                <td><input type="text" name="year1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board2"></td>
+                <td><input type="text" name="percent2"></td>
+                <td><input type="text" name="year2"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Degree</td>
+                <td><input type="text" name="board3"></td>
+                <td><input type="text" name="percent3"></td>
+                <td><input type="text" name="year3"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board4"></td>
+                <td><input type="text" name="percent4"></td>
+                <td><input type="text" name="year4"></td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+<tr>
+    <td>COURSE APPLIED FOR:</td>
+    <td>
+        <input type="radio" name="course" value="MCA"> MCA
+        <input type="radio" name="course" value="MTech"> M.Tech
+        <input type="radio" name="course" value="MSc"> M.Sc
+        <input type="radio" name="course" value="PhD"> Ph.D
+    </td>
+</tr>
+
+<tr>
+    <td>PASSWORD:</td>
+    <td><input type="password" name="password" maxlength="30">(max 30 characters)</td>
+</tr>
+
+<tr>
+    <td>Date of TC:</td>
+    <td><input type="date" name="tcdate"></td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+    </td>
+</tr>
+</table>
 </form>
 </body>
 </html>
