@@ -1,20 +1,15 @@
-h2{
-color:black;
-text-align:center;
-background-color:red;
-border-radius:20px;
+.first{
+    color: green;
+    background-color: black;
+    padding: 10px;
 }
-#class{
-color:#FFD700;
+#second {
+    color: red;
+    background-color: lightblue;
+    padding: 10px;
 }
-#id{
-color:#FFC72C;
-}
-#universal{
-color:#F0E68C;
-}
-body{
-background-color:#000807;
-color:#CCFF00;
-font-size:1.2rem;
+p{
+    color: blue;
+    background-color: lightgray;
+    padding: 10px;
 }
