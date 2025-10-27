@@ -1,111 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript String & Math Functions</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2 {
-            color: #0066cc;
-        }
-        .example {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        button {
-            padding: 5px 10px;
-            margin-top: 5px;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-    </style>
+  <title>String and Math Functions in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    .section {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #0074d9;
+    }
+    button {
+      background-color: #0074d9;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>JavaScript Predefined Functions: String & Math Objects</h1>
+  <!-- String Functions Section -->
+  <div class="section">
+    <h2>1️⃣ String Functions</h2>
+    <p>JavaScript provides many predefined string functions for text manipulation.</p>
+    <pre>
+// Example String
+let text = " Hello JavaScript! ";
 
-    <h2>1. String Functions</h2>
+// Common String Functions
+text.length            // Returns string length
+text.toUpperCase()     // Converts to uppercase
+text.toLowerCase()     // Converts to lowercase
+text.trim()            // Removes spaces from both ends
+text.charAt(6)         // Returns character at position 6
+text.indexOf("Script") // Finds the position of substring
+text.replace("Java", "ECMA") // Replaces text
+text.slice(1, 5)       // Extracts part of string
+text.concat(" is awesome!") // Joins strings
+    </pre>
+    <button onclick="runStringFunctions()">Run String Functions</button>
+    <div id="stringOutput"></div>
+  </div>
 
-    <div class="example">
-        <p><strong>String:</strong> <code>" Hello JavaScript! "</code></p>
-        <ul>
-            <li><code>trim()</code> - Removes whitespace from both ends</li>
-            <li><code>toUpperCase()</code> - Converts to uppercase</li>
-            <li><code>toLowerCase()</code> - Converts to lowercase</li>
-            <li><code>indexOf("Java")</code> - Finds the index of a substring</li>
-            <li><code>slice(1, 6)</code> - Extracts part of the string</li>
-            <li><code>length</code> - Returns string length</li>
-            <li><code>charAt(6)</code> - Return character at position 6</li>
-            <li><code>concat(" is awesome!")</code> - Joins strings</li>
-            <li><code>replace('JavaScript', 'World')</code> - Replaces text</li>
-        </ul>
-        <button onclick="stringFunctions()">Run String Functions</button>
-        <pre id="stringOutput"></pre>
-    </div>
+  <!-- Math Functions Section -->
+  <div class="section">
+    <h2>2️⃣ Math Functions</h2>
+    <p>JavaScript's <strong>Math</strong> object provides mathematical constants and functions.</p>
+    <pre>
+// Common Math Functions
+Math.PI                 // Value of π
+Math.sqrt(25)           // Square root
+Math.pow(2, 3)          // Exponentiation (2³)
+Math.abs(-10)           // Absolute value
+Math.ceil(4.3)          // Round up
+Math.floor(4.9)         // Round down
+Math.round(4.5)         // Round to nearest integer
+Math.random()           // Random number (0 to 1)
+Math.max(10, 20, 30)    // Largest number
+Math.min(10, 20, 30)    // Smallest number
+    </pre>
+    <button onclick="runMathFunctions()">Run Math Functions</button>
+    <div id="mathOutput"></div>
+  </div>
 
-    <h2>2. Math Functions</h2>
+  <script>
+    function runStringFunctions() {
+      let text = " Hello JavaScript! ";
 
-    <div class="example">
-        <p><strong>Number:</strong> <code>Math.PI, 4.7, -5</code></p>
-        <ul>
-            <li><code>Math.round(4.7)</code> - Rounds to the nearest integer</li>
-            <li><code>Math.floor(4.7)</code> - Rounds down</li>
-            <li><code>Math.ceil(4.7)</code> - Rounds up</li>
-            <li><code>Math.abs(-5)</code> - Absolute value</li>
-            <li><code>Math.random()</code> - Random number between 0 and 1</li>
-            <li><code>Math.pow(2, 3)</code> - Power (2³ = 8)</li>
-            <li><code>Math.max(10, 20, 30)</code> - Largest Number</li>
-            <li><code>Math.max(10, 20, 30)</code> - Smallest Number</li>
-        </ul>
-        <button onclick="mathFunctions()">Run Math Functions</button>
-        <pre id="mathOutput"></pre>
-    </div>
+      let output = `
+        Original String: "${text}"<br>
+        Length: ${text.length}<br>
+        Uppercase: ${text.toUpperCase()}<br>
+        Lowercase: ${text.toLowerCase()}<br>
+        Trimmed: "${text.trim()}"<br>
+        Character at 6: ${text.charAt(6)}<br>
+        Index of 'Script': ${text.indexOf("Script")}<br>
+        Replaced: ${text.replace("Java", "ECMA")}<br>
+        Slice(1,5): ${text.slice(1, 5)}<br>
+        Concatenated: ${text.concat(" is awesome!")}
+      `;
+      document.getElementById("stringOutput").innerHTML = output;
+    }
 
-    <script>
-        function stringFunctions() {
-            const str = " Hello JavaScript! ";
-            const results = [
-                "Original: '" + str + "'",
-                "trim(): '" + str.trim() + "'",
-                "toUpperCase(): " + str.toUpperCase(),
-                "toLowerCase(): " + str.toLowerCase(),
-                "indexOf('Java'): " + str.indexOf("Java"),
-                "slice(1, 6): '" + str.slice(1, 6) + "'",
-                 "Length: " + str.length,
-                "charAt(6): " + str.charAt(6),
-                "concat(): " + str.concat(addedStr),
-                "replace('JavaScript', 'World'): " + str.replace("JavaScript", "World")
-            ];
-            document.getElementById("stringOutput").textContent = results.join("\n");
-        }
-
-        function mathFunctions() {
-            const results = [
-                "Math.PI: " + Math.PI,
-                "Math.round(4.7): " + Math.round(4.7),
-                "Math.floor(4.7): " + Math.floor(4.7),
-                "Math.ceil(4.7): " + Math.ceil(4.7),
-                "Math.abs(-5): " + Math.abs(-5),
-                "Math.random(): " + Math.random(),
-                "Math.pow(2, 3): " + Math.pow(2, 3),
-                "Math.max(10,20,30): "+ Math.max(10,20,30),
-                "Math.min(10,20,30): "+ Math.min(10,20,30)
-            ];
-            document.getElementById("mathOutput").textContent = results.join("\n");
-        }
-    </script>
+    function runMathFunctions() {
+      let output = `
+        PI: ${Math.PI}<br>
+        Square Root of 25: ${Math.sqrt(25)}<br>
+        2³: ${Math.pow(2, 3)}<br>
+        |-10| = ${Math.abs(-10)}<br>
+        Ceil(4.3): ${Math.ceil(4.3)}<br>
+        Floor(4.9): ${Math.floor(4.9)}<br>
+        Round(4.5): ${Math.round(4.5)}<br>
+        Random(0-1): ${Math.random()}<br>
+        Max(10,20,30): ${Math.max(10, 20, 30)}<br>
+        Min(10,20,30): ${Math.min(10, 20, 30)}
+      `;
+      document.getElementById("mathOutput").innerHTML = output;
+    }
+  </script>
 
 </body>
 </html>
-
