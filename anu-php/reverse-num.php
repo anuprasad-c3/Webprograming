@@ -13,7 +13,7 @@ function reverseNumber($num) {
 $number = 12345;
 $reversed = reverseNumber($number);
 
-echo "Original Number: $number\n";
-echo "Reversed Number: $reversed\n";
+echo "Original Number: $number<br><br>";
+echo "Reversed Number: $reversed<br>";
 ?>
 
