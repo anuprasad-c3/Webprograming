@@ -1,5 +1,5 @@
 <?php
-// Database connection
+
 $servername = "localhost";
 $username = "root";      // Change if needed
 $password = "";          // Change if needed
@@ -7,12 +7,12 @@ $dbname = "library";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Insert book details if form submitted
+
 if (isset($_POST['submit'])) {
     $book_no = $_POST['book_no'];
     $title = $_POST['title'];
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
             <th>Publisher</th>
         </tr>
         <?php
-        // Fetch and display all books
+       
         $result = $conn->query("SELECT * FROM bookdetails");
 
         if ($result->num_rows > 0) {
