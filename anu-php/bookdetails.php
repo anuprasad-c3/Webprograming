@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "root";      // Change if needed
-$password = "";          // Change if needed
+$username = "root";     
+$password = "";         
 $dbname = "library";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $edition = $_POST['edition'];
     $publisher = $_POST['publisher'];
 
-    // Prevent SQL injection
+    
     $book_no = (int)$book_no;
     $title = $conn->real_escape_string($title);
     $edition = $conn->real_escape_string($edition);
